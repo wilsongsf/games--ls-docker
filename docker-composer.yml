@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    image: nginx:alpine
+    container_name: games-ls-docker
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
+      - ./script.js:/usr/share/nginx/html/script.js
+    ports:
+      - "8080:80"
